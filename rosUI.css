@@ -1,8 +1,21 @@
-.buttonColumnDiv{
-    background-color: blue;
 
-    width: 10%;
-    margin: 50px 0px 0px 50px;
+#masterDiv{
+    /* background-color: green; */
+    margin-top: 3%;
+}
+
+
+
+.buttonColumnDiv{
+    /* background-color: blue; */
+
+    width: 15%;
+    margin: 0px 0px 0px 50px;
+    border: 5px;
+    border-style: solid;
+
+    display: inline-block;
+    height: 700px;
 }
 
 
@@ -10,10 +23,43 @@
     padding: 10px 10px;
     /* margin: 10px 10px; */
     width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#settingsButton{
+    background-color: rgb(250,215,172);
 }
 
 #settingsGear{
     height: 40px;
     width: 40px;
     margin-right: 10px;
+}
+
+
+#modeBarDiv{
+    background-color: rgb(177,221,240);
+    width: 65%;
+    height: 65px;
+    display: inline-block;
+    vertical-align: top;
+    font-weight: bold;
+    font-size: 20px;
+    /* text-align: center; */
+}
+
+#selectModeButton{
+    /* align-content: center; */
+    align-items: right;
+}
+
+#mainDisplayDiv{
+    background-color: rgb(177,221,240);
+    width: 65%;
+    height: 65px;
+    display: inline-block;
+    vertical-align: top;
+    font-weight: bold;
+    font-size: 20px;
 }
