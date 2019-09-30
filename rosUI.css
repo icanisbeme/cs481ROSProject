@@ -46,20 +46,26 @@
     vertical-align: top;
     font-weight: bold;
     font-size: 20px;
+    border-style: solid;
+    border-radius: 3px;
+    border-color: rgba(70, 103, 117, 0.575);
     /* text-align: center; */
 }
 
 #selectModeButton{
     /* align-content: center; */
     align-items: right;
+    float: right;
+    margin: 10px 10px;
 }
 
 #mainDisplayDiv{
     background-color: rgb(177,221,240);
-    width: 65%;
-    height: 65px;
+    /* width: 600px; */
+    /* height: 65px; */
     display: inline-block;
-    vertical-align: top;
+    /* vertical-align: top; */
     font-weight: bold;
     font-size: 20px;
+    /* display: inline; */
 }
