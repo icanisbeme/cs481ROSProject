@@ -1,51 +1,97 @@
 <!doctype html>
 <html lang="en">
-  <head>
 
+<head>
 
     <title>ROS UI</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <script src="rosUI.js"></script>
 
     <!-- my css -->
     <link rel="stylesheet" href="rosUI.css" type="text/css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body class = "bg-light">
+</head>
+
+<body class="bg-light">
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- 
 
+    <div id="masterDiv">
+        <div class="buttonColumnDiv">
 
-  <div id = "masterDiv">
-    <div class = "buttonColumnDiv">
-    
-      <button class = "mainNavButtons" id = "settingsButton"> <img src = "Resources\settingsGear.png" id = "settingsGear"> User Settings </button>
-      <button class = "mainNavButtons">Select Location</button>
-      <button class = "mainNavButtons">Delete Location</button>
-      <button class = "mainNavButtons">Set New Destination</button>
+            <button class="mainNavButtons" id="settingsButton" onClick = "showSettings('mainDisplayDiv', 'userSettingsDiv')"> <img src = "Resources\settingsGear.png" id = "settingsGear"> User Settings </button>
+            <button class="mainNavButtons">Select Location</button>
+            <button class="mainNavButtons">Delete Location</button>
+            <button class="mainNavButtons">Set New Destination</button>
+
+        </div>
+
+        <div id="rightOfButtonsDiv">
+            <div id="modeBarDiv">
+                <label Style=" font-size: 40px; margin-left: 10px;">Manual Mode</label>
+                <button id="selectModeButton">Select Mode</button>
+            </div>
+
+            <div id="mainDisplayDiv">
+
+                main
+
+            </div>
+
+            <div id="userSettingsDiv">
+            
+                <b>User Settings</b>
+                
+                <div class = "settingsDiv">
+                 Font Size: 
+                  <select>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                  </select>
+                </div>
+                <div class = "settingsDiv">
+                 Color Scheme: 
+                  <select>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="white">White</option>
+                  </select>
+                </div>
+                <div class = "settingsDiv">
+                 Language: 
+                  <select>
+                    <option value="english">English</option>
+                    <option value="french">French</option>
+                    <option value="Spanish">Spanish</option>
+                  </select>
+                </div>
+
+                <div class = "settingsDiv">
+                 Battery Indicator 
+                  <label class="rocker">
+                  <input type="checkbox" checked>
+                  <span class="switch-left">On</span>
+                  <span class="switch-right">Off</span>
+                  </label>
+
+                </div>  
+
+            </div>
+
+        </div>
 
     </div>
 
-    <div id = "modeBarDiv">
-      <label Style = " font-size: 40px; margin-left: 10px;">Mode</label>
-      <button id = "selectModeButton">Select Mode</button>
-    </div>
-    
+</body>
 
-    <div id = "mainDisplayDiv">
-      <label>Main Display</label>
-    </div>
-
-
-  </div>
-
-  </body>
 </html>
