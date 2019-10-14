@@ -9,6 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <script src="rosUI.js"></script>
+    
+    <script src="https://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+    <script src="https://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+    <script src="https://static.robotwebtools.org/keyboardteleopjs/current/keyboardteleop.min.js"></script>
+    <script src="//yoannmoinet.github.io/nipplejs/javascripts/nipplejs.js"></script>
+    <script src="webui.js"></script>
 
     <!-- my css -->
     <link rel="stylesheet" href="rosUI.css" type="text/css">
@@ -27,17 +33,18 @@
     <div id="masterDiv">
         <div class="buttonColumnDiv">
 
-            <button class="mainNavButtons" id="settingsButton" onClick = "showSettings('mainDisplayDiv', 'userSettingsDiv')"> <img src = "Resources\settingsGear.png" id = "settingsGear"> User Settings </button>
-            <button class="mainNavButtons">Select Location</button>
-            <button class="mainNavButtons">Delete Location</button>
-            <button class="mainNavButtons">Set New Destination</button>
+            <button class="mainNavButtons" id="settingsButton" onClick = "changeDiv('mainDisplayDiv', 'selectLocationDiv', 'userSettingsDiv')"> <img src = "Resources\settingsGear.png" id = "settingsGear"> <b>User Settings </b> </button>
+            <button class="mainNavButtons" id="mainDisplayButton" onClick = "changeDiv('userSettingsDiv', 'selectLocationDiv', 'mainDisplayDiv')"> <b>Main Display</b> </button>
+            <button class="mainNavButtons" id= "selectLocationButton" disabled="disabled">Select Location</button>
+            <button class="mainNavButtons" id= "deleteLocationButton" disabled="disabled">Delete Location</button>
+            <button class="mainNavButtons" id= "setNewDestinationButton" disabled="disabled">Set New Destination</button>
 
         </div>
 
         <div id="rightOfButtonsDiv">
             <div id="modeBarDiv">
-                <label Style=" font-size: 40px; margin-left: 10px;">Manual Mode</label>
-                <button id="selectModeButton">Select Mode</button>
+                <label id = "modeText" Style=" font-size: 40px; margin-left: 10px;">Manual Mode</label>
+                <button id="selectModeButton" onClick = "modeSwitch()">Select Mode</button>
             </div>
 
             <div id="mainDisplayDiv">
@@ -60,7 +67,7 @@
                 </div>
                 <div class = "settingsDiv">
                  Color Scheme: 
-                  <select>
+                  <select id = "colorDropdown">
                     <option value="red">Red</option>
                     <option value="green">Green</option>
                     <option value="blue">Blue</option>
@@ -86,7 +93,15 @@
 
                 </div>  
 
+
             </div>
+
+            <div id = "selectLocationDiv">
+
+              select location
+
+            </div>
+
 
         </div>
 

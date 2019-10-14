@@ -31,10 +31,14 @@
     background-color: rgb(250,215,172);
 }
 
+#mainDisplayButton{
+    background-color: rgb(177,221,240);
+}
+
 #settingsGear{
-    height: 40px;
-    width: 40px;
-    margin-right: 10px;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
 }
 
 
@@ -81,6 +85,19 @@
 }
 
 #userSettingsDiv{
+    background-color: rgb(240, 177, 177);
+    /* width: 600px; */
+    /* height: 65px; */
+    display: none;
+    /* vertical-align: top; */
+    font-weight: bold;
+    font-size: 20px;
+    /* display: inline; */
+    width: 100%;
+    height: 635px;
+}
+
+#selectLocationDiv{
     background-color: rgb(240, 177, 177);
     /* width: 600px; */
     /* height: 65px; */
