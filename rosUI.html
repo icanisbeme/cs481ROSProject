@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body class="bg-light">
+<body  id = "body">
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -43,39 +43,37 @@
 
         <div id="rightOfButtonsDiv">
             <div id="modeBarDiv">
-                <label id = "modeText" Style=" font-size: 40px; margin-left: 10px;">Manual Mode</label>
+                <label id = "modeText">Manual Mode</label>
                 <button id="selectModeButton" onClick = "modeSwitch()">Select Mode</button>
             </div>
 
             <div id="mainDisplayDiv">
 
-                main
+              <img src = "Resources\rviz_screenshot_2019_12_06-15_00_30.png" id = "rvizScreenshot">
 
             </div>
 
             <div id="userSettingsDiv">
             
-                <b>User Settings</b>
+                <b id = "userSettingsText">User Settings</b>
                 
                 <div class = "settingsDiv">
-                 Font Size: 
-                  <select>
-                    <option value="Small">Small</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Large">Large</option>
-                  </select>
+                 <p id = "fontSizeText">Font Size:</p> 
+                    <input type="button" value="Small" onclick="makeFontSmall()">
+                    <input type="button" value="Medium" onclick="makeFontMedium()">
+                    <input type="button" value="Large" onclick="makeFontBig()">
                 </div>
                 <div class = "settingsDiv">
-                 Color Scheme: 
-                  <select id = "colorDropdown">
-                    <option value="red">Red</option>
-                    <option value="green">Green</option>
-                    <option value="blue">Blue</option>
-                    <option value="white">White</option>
-                  </select>
+                 <p id = "colorSchemeText">Color Scheme: </p>
+                  <input type="button" value="Red" onclick="makeRed()">
+                  <input type="button" value="Blue" onclick="makeBlue()">
+                  <input type="button" value="Black" onclick="makeBlack()">
+                  <input type="button" value="High Contrast" onclick="makeContrast()">
+
+
                 </div>
                 <div class = "settingsDiv">
-                 Language: 
+                 <p id = "languageText">Language:</p> 
                   <select>
                     <option value="english">English</option>
                     <option value="french">French</option>
@@ -83,7 +81,7 @@
                   </select>
                 </div>
 
-                <div class = "settingsDiv">
+              <!--   <div class = "settingsDiv">
                  Battery Indicator 
                   <label class="rocker">
                   <input type="checkbox" checked>
@@ -92,7 +90,7 @@
                   </label>
 
                 </div>  
-
+-->
 
             </div>
 

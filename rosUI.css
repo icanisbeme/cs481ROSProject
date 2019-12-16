@@ -1,6 +1,7 @@
 
+
 #masterDiv{
-    /* background-color: green; */
+    /* color: green; */
     margin-top: 3%;
 }
 
@@ -41,6 +42,11 @@
   margin-right: 10px;
 }
 
+#modeText{
+  font-size: 40px; 
+  margin-left: 10px;
+  /* top: 50%; */
+}
 
 #modeBarDiv{
     background-color: rgb(177,221,240);
@@ -65,7 +71,7 @@
 }
 
 #mainDisplayDiv{
-    background-color: rgb(240, 177, 177);
+    background-color: rgb(255, 137, 137);
     /* width: 600px; */
     /* height: 65px; */
     display: inline-block;
@@ -85,7 +91,7 @@
 }
 
 #userSettingsDiv{
-    background-color: rgb(240, 177, 177);
+    background-color:rgb(255, 137, 137);
     /* width: 600px; */
     /* height: 65px; */
     display: none;
@@ -95,6 +101,13 @@
     /* display: inline; */
     width: 100%;
     height: 635px;
+}
+
+#rvizScreenshot{
+  height: 600px;
+  /* width: 750px; */
+  padding-left: 10%;
+  padding-top: 5%;
 }
 
 #selectLocationDiv{
@@ -118,17 +131,17 @@
 
 
 /* Switch starts here */
-.rocker {
+/* .rocker {
     display: inline-block;
     position: relative;
-    /*
+    
     SIZE OF SWITCH
     ==============
     All sizes are in em - therefore
     changing the font-size here
     will change the size of the switch.
     See .rocker-small below as example.
-    */
+    
     font-size: 0.75em;
     font-weight: bold;
     text-align: center;
@@ -141,7 +154,7 @@
   }
   
   .rocker-small {
-    font-size: 0.75em; /* Sizes the switch */
+    font-size: 0.75em; /* Sizes the switch 
     margin: 1em;
   }
   
@@ -241,7 +254,7 @@
     background-color: #ccc;
   }
   
-  /* Keyboard Users */
+  /* Keyboard Users 
   input:focus + .switch-left {
     color: #333;
   }
@@ -256,4 +269,8 @@
   
   input:checked:focus + .switch-left + .switch-right {
     color: #333;
+  } */
+
+  #body{
+    background-color: rgb(250, 250, 250);
   }
